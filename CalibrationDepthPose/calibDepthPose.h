@@ -82,5 +82,6 @@ private:
                               // (it is the pose of the camera in the other sensor frame)
 };
 
-}
+} // namespace CalibrationDepthPose
+
 #endif // CALIBDEPTHPOSE_H

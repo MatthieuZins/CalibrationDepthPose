@@ -55,6 +55,6 @@ void transformInPlace(Pointcloud::Ptr& pc, Eigen::Isometry3d const& H);
  */
 Pointcloud::Ptr transform(Pointcloud::Ptr pc, Eigen::Isometry3d const& H);
 
-}
+} // namespace CalibrationDepthPose
 
 #endif // PCLUTILS_H

@@ -23,9 +23,15 @@
 
 #include <CalibrationDepthPose/pclUtils.h>
 
-#define TO_RADIANS(x) x * 0.01745329251
-#define TO_DEGREES(x) x * 57.2957795131
+template <class Type>
+constexpr double TO_RADIANS(const Type& x) {
+  return static_cast<double>(x) *  0.01745329251;
+}
 
+template <class T>
+constexpr double TO_DEGREES(const T& x) {
+  return static_cast<double>(x) * 57.2957795131;
+}
 
 using ColoredPoint = pcl::PointXYZRGB;
 using ColoredPointcloud = pcl::PointCloud<ColoredPoint>;

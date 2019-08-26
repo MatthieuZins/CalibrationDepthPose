@@ -93,6 +93,6 @@ analyzePlane(Eigen::MatrixX3d const& points)
   return std::make_tuple(D[D_idx[0]], D[D_idx[1]], D[D_idx[2]], V.col(D_idx[2]));
 }
 
-}
+} // namespace CalibrationDepthPose
 
 #endif // CALIBTOOLS_H

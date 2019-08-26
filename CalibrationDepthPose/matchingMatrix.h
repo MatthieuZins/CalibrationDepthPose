@@ -81,6 +81,6 @@ private:
 // Print the matrix
 std::ostream& operator <<(std::ostream& os, MatchingMatrix const& matrix);
 
-}
+} // namespace CalibrationDepthPose
 
 #endif // MATCHINGMATRIX_H

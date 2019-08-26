@@ -12,6 +12,6 @@ namespace CalibrationDepthPose
 using Isometry3d_vector
   = std::vector<Eigen::Isometry3d, Eigen::aligned_allocator<Eigen::Isometry3d> >;
 
-}
+} // namespace CalibrationDepthPose
 
 #endif // EIGENUTILS_H

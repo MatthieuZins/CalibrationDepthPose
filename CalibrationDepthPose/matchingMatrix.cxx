@@ -75,4 +75,4 @@ std::ostream &operator <<(std::ostream &os, const PairsMatchingStrategy &strateg
   return os;
 }
 
-}
+} // namespace CalibrationDepthPose

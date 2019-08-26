@@ -20,9 +20,4 @@
 namespace CalibrationDepthPose
 {
 
-CalibParameters::CalibParameters()
-{
-
-}
-
-}
+} // namespace CalibrationDepthPose

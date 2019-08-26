@@ -41,7 +41,8 @@ void saveMatches(std::vector<Eigen::Vector3d> const& pts1,
   file.close();
 }
 
-}
+} // namespace anonymous
+
 namespace CalibrationDepthPose
 {
 
@@ -71,9 +72,9 @@ void CalibDepthPose::calibIteration(CalibParameters *params)
   std::cout << matchedPairs.size() << " pairs of matched point clouds" << std::endl;
 
   // Fill the thrad pool with matching tasks
-  std::vector< std::vector<Eigen::Vector3d> > keep_pts1(matchedPairs.size()),
-                                              keep_pts2(matchedPairs.size()),
-                                              keep_normals(matchedPairs.size());
+  std::vector< std::vector<Eigen::Vector3d> > keep_pts1(matchedPairs.size());
+  std::vector< std::vector<Eigen::Vector3d> > keep_pts2(matchedPairs.size());
+  std::vector< std::vector<Eigen::Vector3d> > keep_normals(matchedPairs.size());
   Isometry3d_vector keep_posesDiff(matchedPairs.size());
   std::vector< std::future<unsigned int> > nbMatchedPoints;
   unsigned int totalNbMatchedPoints = 0;
@@ -150,4 +151,4 @@ std::ostream& operator <<(std::ostream& os, CalibrationRaw const& calib)
   return os;
 }
 
-}
+} // namespace CalibrationDepthPose

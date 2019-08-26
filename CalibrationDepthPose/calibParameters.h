@@ -33,17 +33,15 @@ enum class DistanceType
 /// This struct is just a wrapper for all the different parameters that can be tuned for matching
 struct CalibParameters
 {
-public:
-  CalibParameters();
+  CalibParameters() = default;
 
-public:
-  DistanceType distanceType;
-  double matchingMaxDistance;
-  double matchingRequiredNbNeighbours;
-  double matchingPlaneDiscriminatorThreshold;
+  DistanceType distanceType = DistanceType::POINT_TO_PLANE;
+  double matchingMaxDistance = 0.1;
+  double matchingRequiredNbNeighbours = 10;
+  double matchingPlaneDiscriminatorThreshold = 0.7;
   unsigned int nbThreads = std::thread::hardware_concurrency();
 };
 
-}
+} // namespace CalibrationDepthPose
 
 #endif // CALIBPARAMETERS_H

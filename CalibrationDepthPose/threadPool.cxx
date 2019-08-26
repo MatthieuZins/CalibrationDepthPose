@@ -69,4 +69,4 @@ ThreadPool::~ThreadPool()
 }
 
 
-}
+} // namespace CalibrationDepthPose

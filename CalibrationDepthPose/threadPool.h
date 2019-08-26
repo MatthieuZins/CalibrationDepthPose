@@ -79,6 +79,6 @@ auto ThreadPool::enqueue(F&& f, Args&&... args)
   return res;
 }
 
-}
+} // namespace CalibrationDepthPose
 
 #endif // THREADPOOL_H

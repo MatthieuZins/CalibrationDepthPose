@@ -21,6 +21,10 @@
 #include <ceres/ceres.h>
 #include <ceres/rotation.h>
 
+
+namespace CalibrationDepthPose
+{
+
 /**
  * @brief The CalibrationResiduals struct Residual function for matching
  * The distances are computed in camera 2 frame, which means that pt is transformed to camera 2 frame
@@ -102,6 +106,7 @@ public:
   EIGEN_MAKE_ALIGNED_OPERATOR_NEW;
 };
 
+} // namespace CalibrationDepthPose
 
 
 #endif // CALIBCOSTFUNCTIONS_H

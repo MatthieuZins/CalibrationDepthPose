@@ -52,5 +52,4 @@ Pointcloud::Ptr transform(Pointcloud::Ptr pc, const Eigen::Isometry3d &H)
   return tempCloud;
 }
 
-
-}
+} // namespace CalibrationDepthPose

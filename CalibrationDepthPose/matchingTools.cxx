@@ -121,4 +121,4 @@ std::tuple<bool, Eigen::Vector3d, Eigen::Vector3d>
   return std::make_tuple(false, Eigen::Vector3d::Zero(), Eigen::Vector3d::Zero());
 }
 
-}
+} // namespace CalibrationDepthPose
